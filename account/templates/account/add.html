@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Add Course{% endblock %}
+
+{% block content %}
+	<h1>Available course List</h1>
+
+	{% for course in course_list %}
+		<br>{{ course.coursecode}} {{ course.coursetitle }}
+			<a href = "{% url "new" course.id %}" style = "text-decoration:none">
+				<input id="submit" type="button" value="Add" />		
+			</a>
+	{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Course{% endblock %}
+
+{% block content %}
+	
+	<h2>Students registered with {{ course_title }} </h2>
+
+	<ul>
+	{% for course in course_list %}
+		<li> {{ course.owner }} </li>
+	{% endfor %}
+	</ul>
+
+{% endblock %}

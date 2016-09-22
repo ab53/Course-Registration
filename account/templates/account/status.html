@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Course List{% endblock %}
+
+{% block content %}
+	<h1>Course List</h1>
+
+	{% for course in course_list %}
+	
+		<a href = "{% url "detail" course.id %}" style = "text-decoration:none">
+			<br>{{ course.coursecode}} {{ course.coursetitle }}		
+		</a>
+
+	{% endfor %}
+
+{% endblock %}
